@@ -421,12 +421,12 @@ namespace AppTiendaMascotas
                 MessageBox.Show("Alojamiento no eliminado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //
         private void btnEliminarAtencion_Click(object sender, EventArgs e)
         {
             int idAtencion, resultado;
 
-            idAtencion = int.Parse(txtIdResidenciaDelete.Text);
+            idAtencion = int.Parse(txtAtencionDelete.Text);
             try
             {
                 resultado = atiende.eliminarAtencion(idAtencion);
