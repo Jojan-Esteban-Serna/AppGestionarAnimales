@@ -38,5 +38,14 @@ namespace AppTiendaMascotas.logica
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
+
+        public string consultarSalarioPromedioEmpleado()
+        {
+            DataSet rDT = new DataSet();
+            string consulta;
+            consulta = "SELECT AVG(SALARIOEMPLEADO) FROM EMPLEADO";
+            rDT = dt.ejecutarSELECT(consulta);
+            return rDT.Tables[0].Rows[0][0].ToString();
+        }
     }
 }

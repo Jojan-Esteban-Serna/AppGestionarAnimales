@@ -38,5 +38,23 @@ namespace AppTiendaMascotas.logica
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
+
+        public string consultarProductoMasCaro()
+        {
+            DataSet rDT = new DataSet();
+            string consulta;
+            consulta = "SELECT NOMBREPRODUCTO FROM PRODUCTO WHERE PRECIOPRODUCTO = (SELECT MAX(PRECIOPRODUCTO) FROM PRODUCTO)";
+            rDT = dt.ejecutarSELECT(consulta);
+            return rDT.Tables[0].Rows[0][0].ToString();
+        }
+
+        public string consultarCantidadProductos()
+        {
+            DataSet rDT = new DataSet();
+            string consulta;
+            consulta = "SELECT COUNT(SERIALPRODUCTO) FROM PRODUCTO";
+            rDT = dt.ejecutarSELECT(consulta);
+            return rDT.Tables[0].Rows[0][0].ToString();
+        }
     }
 }

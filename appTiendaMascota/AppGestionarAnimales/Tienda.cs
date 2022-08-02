@@ -859,5 +859,24 @@ namespace AppTiendaMascotas
                 MessageBox.Show("Compra no registrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnConsulta1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lblResConsulta1.Text = res.consultarCantidadResidencias();
+                lblResConsulta2.Text = cli.consultarCantidadClientes();
+                lblResConsulta3.Text = emp.consultarSalarioPromedioEmpleado();
+                lblResConsulta4.Text = prod.consultarProductoMasCaro();
+                lblResConsulta5.Text = prod.consultarCantidadProductos();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
 }

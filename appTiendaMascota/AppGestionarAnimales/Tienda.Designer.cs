@@ -29,7 +29,7 @@ namespace AppTiendaMascotas
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tcGestion = new System.Windows.Forms.TabControl();
             this.tbResidencia = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnEliminarResidencia = new System.Windows.Forms.Button();
@@ -226,7 +226,19 @@ namespace AppTiendaMascotas
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnConsultarCompra = new System.Windows.Forms.Button();
             this.dgvConsultaCompra = new System.Windows.Forms.DataGridView();
-            this.tabControl1.SuspendLayout();
+            this.tpConsultasRelevantes = new System.Windows.Forms.TabPage();
+            this.lblConsulta1 = new System.Windows.Forms.Label();
+            this.lblConsulta2 = new System.Windows.Forms.Label();
+            this.lblConsulta3 = new System.Windows.Forms.Label();
+            this.lblConsulta4 = new System.Windows.Forms.Label();
+            this.lblConsulta5 = new System.Windows.Forms.Label();
+            this.btnConsulta1 = new System.Windows.Forms.Button();
+            this.lblResConsulta5 = new System.Windows.Forms.Label();
+            this.lblResConsulta4 = new System.Windows.Forms.Label();
+            this.lblResConsulta3 = new System.Windows.Forms.Label();
+            this.lblResConsulta2 = new System.Windows.Forms.Label();
+            this.lblResConsulta1 = new System.Windows.Forms.Label();
+            this.tcGestion.SuspendLayout();
             this.tbResidencia.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosResidenciaR)).BeginInit();
@@ -277,25 +289,27 @@ namespace AppTiendaMascotas
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarVentas)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaCompra)).BeginInit();
+            this.tpConsultasRelevantes.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tcGestion
             // 
-            this.tabControl1.Controls.Add(this.tbResidencia);
-            this.tabControl1.Controls.Add(this.tbCliente);
-            this.tabControl1.Controls.Add(this.tbEmpleado);
-            this.tabControl1.Controls.Add(this.tbProducto);
-            this.tabControl1.Controls.Add(this.tbMascota);
-            this.tabControl1.Controls.Add(this.tbAlojar);
-            this.tabControl1.Controls.Add(this.tbAtiende);
-            this.tabControl1.Controls.Add(this.tbVenta);
-            this.tabControl1.Controls.Add(this.tbCompra);
-            this.tabControl1.Controls.Add(this.tbConsultas);
-            this.tabControl1.Location = new System.Drawing.Point(33, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(931, 496);
-            this.tabControl1.TabIndex = 0;
+            this.tcGestion.Controls.Add(this.tbResidencia);
+            this.tcGestion.Controls.Add(this.tbCliente);
+            this.tcGestion.Controls.Add(this.tbEmpleado);
+            this.tcGestion.Controls.Add(this.tbProducto);
+            this.tcGestion.Controls.Add(this.tbMascota);
+            this.tcGestion.Controls.Add(this.tbAlojar);
+            this.tcGestion.Controls.Add(this.tbAtiende);
+            this.tcGestion.Controls.Add(this.tbVenta);
+            this.tcGestion.Controls.Add(this.tbCompra);
+            this.tcGestion.Controls.Add(this.tbConsultas);
+            this.tcGestion.Controls.Add(this.tpConsultasRelevantes);
+            this.tcGestion.Location = new System.Drawing.Point(33, 12);
+            this.tcGestion.Name = "tcGestion";
+            this.tcGestion.SelectedIndex = 0;
+            this.tcGestion.Size = new System.Drawing.Size(931, 496);
+            this.tcGestion.TabIndex = 0;
             // 
             // tbResidencia
             // 
@@ -2191,15 +2205,136 @@ namespace AppTiendaMascotas
             this.dgvConsultaCompra.Size = new System.Drawing.Size(483, 192);
             this.dgvConsultaCompra.TabIndex = 26;
             // 
+            // tpConsultasRelevantes
+            // 
+            this.tpConsultasRelevantes.Controls.Add(this.lblResConsulta5);
+            this.tpConsultasRelevantes.Controls.Add(this.lblResConsulta4);
+            this.tpConsultasRelevantes.Controls.Add(this.lblResConsulta3);
+            this.tpConsultasRelevantes.Controls.Add(this.lblResConsulta2);
+            this.tpConsultasRelevantes.Controls.Add(this.lblResConsulta1);
+            this.tpConsultasRelevantes.Controls.Add(this.btnConsulta1);
+            this.tpConsultasRelevantes.Controls.Add(this.lblConsulta5);
+            this.tpConsultasRelevantes.Controls.Add(this.lblConsulta4);
+            this.tpConsultasRelevantes.Controls.Add(this.lblConsulta3);
+            this.tpConsultasRelevantes.Controls.Add(this.lblConsulta2);
+            this.tpConsultasRelevantes.Controls.Add(this.lblConsulta1);
+            this.tpConsultasRelevantes.Location = new System.Drawing.Point(4, 22);
+            this.tpConsultasRelevantes.Name = "tpConsultasRelevantes";
+            this.tpConsultasRelevantes.Padding = new System.Windows.Forms.Padding(3);
+            this.tpConsultasRelevantes.Size = new System.Drawing.Size(923, 470);
+            this.tpConsultasRelevantes.TabIndex = 11;
+            this.tpConsultasRelevantes.Text = "Consultas Relevantes";
+            this.tpConsultasRelevantes.UseVisualStyleBackColor = true;
+            // 
+            // lblConsulta1
+            // 
+            this.lblConsulta1.AutoSize = true;
+            this.lblConsulta1.Location = new System.Drawing.Point(294, 106);
+            this.lblConsulta1.Name = "lblConsulta1";
+            this.lblConsulta1.Size = new System.Drawing.Size(120, 13);
+            this.lblConsulta1.TabIndex = 0;
+            this.lblConsulta1.Text = "Cantidad de residencias";
+            // 
+            // lblConsulta2
+            // 
+            this.lblConsulta2.AutoSize = true;
+            this.lblConsulta2.Location = new System.Drawing.Point(311, 161);
+            this.lblConsulta2.Name = "lblConsulta2";
+            this.lblConsulta2.Size = new System.Drawing.Size(103, 13);
+            this.lblConsulta2.TabIndex = 1;
+            this.lblConsulta2.Text = "Cantidad de clientes";
+            // 
+            // lblConsulta3
+            // 
+            this.lblConsulta3.AutoSize = true;
+            this.lblConsulta3.Location = new System.Drawing.Point(276, 214);
+            this.lblConsulta3.Name = "lblConsulta3";
+            this.lblConsulta3.Size = new System.Drawing.Size(138, 13);
+            this.lblConsulta3.TabIndex = 2;
+            this.lblConsulta3.Text = "Promedio salario empleados";
+            // 
+            // lblConsulta4
+            // 
+            this.lblConsulta4.AutoSize = true;
+            this.lblConsulta4.Location = new System.Drawing.Point(318, 267);
+            this.lblConsulta4.Name = "lblConsulta4";
+            this.lblConsulta4.Size = new System.Drawing.Size(96, 13);
+            this.lblConsulta4.TabIndex = 3;
+            this.lblConsulta4.Text = "Producto mas caro";
+            // 
+            // lblConsulta5
+            // 
+            this.lblConsulta5.AutoSize = true;
+            this.lblConsulta5.Location = new System.Drawing.Point(294, 321);
+            this.lblConsulta5.Name = "lblConsulta5";
+            this.lblConsulta5.Size = new System.Drawing.Size(114, 13);
+            this.lblConsulta5.TabIndex = 4;
+            this.lblConsulta5.Text = "Cantidad de productos";
+            // 
+            // btnConsulta1
+            // 
+            this.btnConsulta1.Location = new System.Drawing.Point(396, 375);
+            this.btnConsulta1.Name = "btnConsulta1";
+            this.btnConsulta1.Size = new System.Drawing.Size(173, 23);
+            this.btnConsulta1.TabIndex = 5;
+            this.btnConsulta1.Text = "Realizar consultas";
+            this.btnConsulta1.UseVisualStyleBackColor = true;
+            this.btnConsulta1.Click += new System.EventHandler(this.btnConsulta1_Click);
+            // 
+            // lblResConsulta5
+            // 
+            this.lblResConsulta5.AutoSize = true;
+            this.lblResConsulta5.Location = new System.Drawing.Point(550, 321);
+            this.lblResConsulta5.Name = "lblResConsulta5";
+            this.lblResConsulta5.Size = new System.Drawing.Size(19, 13);
+            this.lblResConsulta5.TabIndex = 14;
+            this.lblResConsulta5.Text = "----";
+            // 
+            // lblResConsulta4
+            // 
+            this.lblResConsulta4.AutoSize = true;
+            this.lblResConsulta4.Location = new System.Drawing.Point(550, 267);
+            this.lblResConsulta4.Name = "lblResConsulta4";
+            this.lblResConsulta4.Size = new System.Drawing.Size(19, 13);
+            this.lblResConsulta4.TabIndex = 13;
+            this.lblResConsulta4.Text = "----";
+            // 
+            // lblResConsulta3
+            // 
+            this.lblResConsulta3.AutoSize = true;
+            this.lblResConsulta3.Location = new System.Drawing.Point(550, 214);
+            this.lblResConsulta3.Name = "lblResConsulta3";
+            this.lblResConsulta3.Size = new System.Drawing.Size(19, 13);
+            this.lblResConsulta3.TabIndex = 12;
+            this.lblResConsulta3.Text = "----";
+            // 
+            // lblResConsulta2
+            // 
+            this.lblResConsulta2.AutoSize = true;
+            this.lblResConsulta2.Location = new System.Drawing.Point(550, 161);
+            this.lblResConsulta2.Name = "lblResConsulta2";
+            this.lblResConsulta2.Size = new System.Drawing.Size(19, 13);
+            this.lblResConsulta2.TabIndex = 11;
+            this.lblResConsulta2.Text = "----";
+            // 
+            // lblResConsulta1
+            // 
+            this.lblResConsulta1.AutoSize = true;
+            this.lblResConsulta1.Location = new System.Drawing.Point(550, 106);
+            this.lblResConsulta1.Name = "lblResConsulta1";
+            this.lblResConsulta1.Size = new System.Drawing.Size(19, 13);
+            this.lblResConsulta1.TabIndex = 10;
+            this.lblResConsulta1.Text = "----";
+            // 
             // Tienda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 520);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tcGestion);
             this.Name = "Tienda";
             this.Text = " Tienda de Mascotas";
-            this.tabControl1.ResumeLayout(false);
+            this.tcGestion.ResumeLayout(false);
             this.tbResidencia.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -2267,13 +2402,15 @@ namespace AppTiendaMascotas
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarVentas)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaCompra)).EndInit();
+            this.tpConsultasRelevantes.ResumeLayout(false);
+            this.tpConsultasRelevantes.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tcGestion;
         private System.Windows.Forms.TabPage tbResidencia;
         private System.Windows.Forms.TabPage tbCliente;
         private System.Windows.Forms.TabPage tbEmpleado;
@@ -2470,5 +2607,17 @@ namespace AppTiendaMascotas
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btnConsultarCompra;
         private System.Windows.Forms.DataGridView dgvConsultaCompra;
+        private System.Windows.Forms.TabPage tpConsultasRelevantes;
+        private System.Windows.Forms.Label lblResConsulta5;
+        private System.Windows.Forms.Label lblResConsulta4;
+        private System.Windows.Forms.Label lblResConsulta3;
+        private System.Windows.Forms.Label lblResConsulta2;
+        private System.Windows.Forms.Label lblResConsulta1;
+        private System.Windows.Forms.Button btnConsulta1;
+        private System.Windows.Forms.Label lblConsulta5;
+        private System.Windows.Forms.Label lblConsulta4;
+        private System.Windows.Forms.Label lblConsulta3;
+        private System.Windows.Forms.Label lblConsulta2;
+        private System.Windows.Forms.Label lblConsulta1;
     }
 }

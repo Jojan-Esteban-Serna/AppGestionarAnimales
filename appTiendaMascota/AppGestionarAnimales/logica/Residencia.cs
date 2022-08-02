@@ -39,5 +39,14 @@ namespace AppTiendaMascotas.logica
             rDT = dt.ejecutarSELECT(consulta);
             return rDT;
         }
+
+        public string consultarCantidadResidencias()
+        {
+            DataSet rDT = new DataSet();
+            string consulta;
+            consulta = "SELECT COUNT(IDRESIDENCIA) FROM RESIDENCIA";
+            rDT = dt.ejecutarSELECT(consulta);
+            return rDT.Tables[0].Rows[0][0].ToString();
+        }
     }
 }
